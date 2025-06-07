@@ -1,5 +1,5 @@
 import heapq
-from utils.workspace import create_random_workspace, grid_to_graph
+from utils.workspace import createRandomGrid, grid_to_graph
 from utils.plotting import plot_workspace
 
 def dijkstra(graph, start, goal):
@@ -55,8 +55,7 @@ if __name__ == "__main__":
     n_obs = 20
     
     # Random map/grid initialization
-    obstacles, start, goal = create_random_workspace(width=width, height=height, n_obstacles=n_obs, obstacle_radius_range=(7, 10), seed=seed)
-
+    obstacles, start, goal = createRandomGrid(width=width, height=height, n_obstacles=n_obs, obstacle_radius_range=(7, 10), seed=seed)
     graph = grid_to_graph(obstacles=obstacles, width=width, height=height, resolution=1, connectivity=8)
     
     path, cost = dijkstra(graph, start, goal)
