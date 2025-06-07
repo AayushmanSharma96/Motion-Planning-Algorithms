@@ -11,7 +11,7 @@ Implementing fundamental motion-planning algorithms in Python.
   ![DFS](plots/dfs_plot.png)  
   - Breadth-First Search (BFS)  
   - Dijkstra’s Algorithm
-  ![Dijsktra](plots/dijsktra_plot.png)  
+  ![Dijkstra](plots/dijkstra_plot.png)  
   - A* Search
   ![A*](plots/a_star_plot.png)  
 
