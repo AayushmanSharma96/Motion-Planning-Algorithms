@@ -1,4 +1,7 @@
 from collections import deque
+from utils.workspace import create_random_workspace, grid_to_graph
+from utils.plotting import plot_workspace
+
 
 def breadth_first_search(graph, start, goal):
     """
@@ -22,7 +25,7 @@ def breadth_first_search(graph, start, goal):
         if current == goal:
             break
 
-        for neighbor in graph.get(current, []):
+        for neighbor,_ in graph.get(current, []):
             if neighbor not in visited:
                 visited.add(neighbor)
                 parent[neighbor] = current

@@ -52,12 +52,12 @@ def dijkstra(graph, start, goal):
 if __name__ == "__main__":
     width, height = 100, 100
     seed = 10
-    n_obs = 10
+    n_obs = 20
     
     # Random map/grid initialization
-    obstacles, start, goal = create_random_workspace(width=width, height=height, n_obstacles=n_obs, obstacle_radius_range=(2, 10), seed=seed)
+    obstacles, start, goal = create_random_workspace(width=width, height=height, n_obstacles=n_obs, obstacle_radius_range=(7, 10), seed=seed)
 
-    graph = grid_to_graph(obstacles=obstacles, width=width, height=height, resolution=1, connectivity=4)
+    graph = grid_to_graph(obstacles=obstacles, width=width, height=height, resolution=1, connectivity=8)
     
     path, cost = dijkstra(graph, start, goal)
 

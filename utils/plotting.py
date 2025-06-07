@@ -6,7 +6,7 @@ def plot_workspace(obstacles, start, goal, path=None, tree_edges=None, title="Wo
     
     # Plot obstacles
     for (x, y, r) in obstacles:
-        circle = patches.Circle((x, y), r, color='gray', alpha=0.5)
+        circle = patches.Circle((x, y), r, color='gray', alpha=1.0)
         ax.add_patch(circle)
 
     # Plot start and goal

@@ -1,3 +1,6 @@
+from utils.workspace import create_random_workspace, grid_to_graph
+from utils.plotting import plot_workspace
+
 def depth_first_search(graph, start, goal):
     """
     Perform Depth First Search (DFS) on a graph.
@@ -23,7 +26,7 @@ def depth_first_search(graph, start, goal):
         if current not in visited:
             visited.add(current)
 
-            for neighbor in graph.get(current, []):
+            for neighbor,_ in graph.get(current, []):
                 if neighbor not in visited:
                     parent[neighbor] = current
                     stack.append(neighbor)
@@ -45,7 +48,7 @@ def depth_first_search(graph, start, goal):
 if __name__ == "__main__":
     width, height = 100, 100
     seed = 10
-    n_obs = 10
+    n_obs = 20
     
     # Random map/grid initialization
     obstacles, start, goal = create_random_workspace(width=width, height=height, n_obstacles=n_obs, obstacle_radius_range=(2, 10), seed=seed)
