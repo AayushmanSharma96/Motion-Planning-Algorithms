@@ -27,7 +27,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 # Install dependencies
-pip install -r requirements.txt  # e.g., networkx, matplotlib, numpy
+pip install numpy matplotlib
 ```
 
 ---
@@ -38,33 +38,13 @@ Each algorithm script can be run directly. For example:
 
 ```bash
 # Run A* on a sample grid map
-python algos/astar.py --Map examples/maps/simple_grid.txt --visualize
+python a_star.py
 
 # Run RRT* in a 2D environment
-python algos/rrt_star.py --start 0 0 --goal 10 10 --iterations 500 --visualize
+python rrt_star.py
 ```
 
-Check the `examples/` folder for ready-to-run scripts and custom maps.
 
----
-
-## 🗂️ Repo Layout
-```
-Motion-Planning-Algorithms/
-├─ algos/
-│   ├─ astar.py
-│   ├─ dijkstra.py
-│   ├─ rrt.py
-│   ├─ rrt_star.py
-│   └─ prm.py
-├─ examples/
-│   ├─ simple_astar_example.py
-│   ├─ rrt_visualization.py
-│   └─ maps/
-│       └─ simple_grid.txt
-├─ requirements.txt
-└─ README.md
-```
 
 ---
 
